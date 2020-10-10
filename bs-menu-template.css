@@ -1,0 +1,155 @@
+/**
+* Bootstrap Template - A Flexbox based Menu
+* @author: Kean Allen Imam
+* October 10, 2020
+*
+* https://github.com/keanallen
+*/
+
+div.sidemenu{
+    width: 100px;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+div.sidemenu::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+  }
+div.sidemenu-brand{
+    min-height: 90px;
+}
+div.sidemenu ul{
+    list-style: none;
+    padding: 0;
+}
+div.sidemenu ul li{
+   text-align: center;
+   font-size: 2vh;
+   height: 100%;
+   padding: 10px !important;
+
+}
+div.sidemenu ul li a{
+    text-decoration: none;
+}
+div.sidemenu ul li:last-child{
+    border-bottom: none;
+}
+/**
+* SIDEMENU COLOR
+*  sidemenu-dark
+* sidemenu-light
+* sidemenu-light-dark
+*/
+/** Dark */
+div.sidemenu-dark{
+    background-color: #343a40;
+}
+div.sidemenu-dark .sidemenu-brand, div.sidemenu-light-dark .sidemenu-brand{
+    color: #eee;
+}
+div.sidemenu-dark ul li, div.sidemenu-light-dark ul li{
+    border-bottom: 1px solid #212F3D ;
+    color: #ccc;
+}
+div.sidemenu-dark ul li a, div.sidemenu-light-dark ul li a{
+    color: #bbb;
+}
+div.sidemenu-dark ul li:hover a,div.sidemenu-light-dark ul li:hover a{
+    color: #fff;
+   }
+   div.sidemenu-dark ul li.active{
+       background-color: #1C2833;
+       
+   }
+   div.sidemenu-dark ul li.active a, div.sidemenu-light-dark ul li.active a{
+   color:#fff;
+    
+}
+/** Light **/
+div.sidemenu{
+    box-shadow: 0px 0px 8px #E5E7E9;
+}
+div.sidemenu-light{
+    background-color:#D5DBDB;
+}
+div.sidemenu-light ul li{
+    border-bottom: 1px solid #CACFD2  ;
+    color: #5F6A6A ;
+}
+div.sidemenu-light ul li a{
+    color: #5F6A6A ;
+}
+div.sidemenu-light ul li:hover a{
+    color: #2E4053 ;
+}
+div.sidemenu-light ul li.active{
+    background-image: linear-gradient(
+        to top right, 
+        #BDC3C7 , #CACFD2 
+      );
+    
+}
+div.sidemenu-light ul li.active a{
+    color: #2E4053;
+}
+/** light-dark **/
+
+div.sidemenu-light-dark{
+    background-color: #34495E ;
+}
+div.sidemenu-light-dark ul li:hover a{
+ color: #fff;
+}
+div.sidemenu-light-dark ul li.active{
+    background-color: #283747 ;
+}
+
+
+@media screen and (max-width:991px){
+    .flex-row-to-column{
+        flex-direction: column !important;
+    }
+    .flex-column-to-row{
+        margin: 0;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+    }
+    div.sidemenu{
+        width: 100%;
+        min-height: auto !important;
+    }
+    div.sidemenu-brand{
+        display: none !important;
+    }
+    div.sidemenu ul li{
+        border: none;
+        width: 100%;
+        height: 100% !important;
+    }
+    .flex-tablet-top{
+        order: 0;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0px 5px 5px #999 !important;
+    }
+    .flex-tablet-bottom{
+        order: 1;
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+        box-shadow: 0px -2px 5px #999 !important;
+    }
+}
+
+@media screen and (max-width:400px)
+{
+   
+    div.sidemenu ul{
+        min-width: 400px !important;
+        overflow-x: scroll !important;
+    }
+    
+}
