@@ -19,22 +19,44 @@ div.sidemenu::-webkit-scrollbar {
 div.sidemenu-brand{
     min-height: 90px;
 }
-div.sidemenu ul{
+div.sidemenu > ul{
     list-style: none;
     padding: 0;
 }
-div.sidemenu ul li{
+div.sidemenu > ul li{
    text-align: center;
    font-size: 2vh;
    height: 100%;
    padding: 10px !important;
 
 }
-div.sidemenu ul li a{
+div.sidemenu > ul li a{
     text-decoration: none;
+    width: 100%;
 }
-div.sidemenu ul li:last-child{
+div.sidemenu > ul li:last-child{
     border-bottom: none;
+}
+
+div.sidemenu ul li  > ul{
+    display: none !important;
+}
+div.sidemenu ul li:hover > ul{
+    list-style: none;
+ display: block !important;
+ position: absolute;
+ left: 93px;
+ min-width: 95px;
+ max-width: auto;
+ padding: 0 !important;
+ background-color: #5F6A6A;
+}
+div.sidemenu ul li:hover ul li{
+    text-align: left !important;
+}
+div.sidemenu ul li > ul li a{
+    width: 100% !important;
+    display: block;
 }
 /**
 * SIDEMENU COLOR
@@ -44,6 +66,9 @@ div.sidemenu ul li:last-child{
 */
 /** Dark */
 div.sidemenu-dark{
+    background-color: #343a40;
+}
+div.sidemenu-dark ul li:hover > ul{
     background-color: #343a40;
 }
 div.sidemenu-dark .sidemenu-brand, div.sidemenu-light-dark .sidemenu-brand{
@@ -74,6 +99,9 @@ div.sidemenu{
 div.sidemenu-light{
     background-color:#D5DBDB;
 }
+div.sidemenu-light ul li:hover > ul{
+    background-color:#D5DBDB;
+}
 div.sidemenu-light ul li{
     border-bottom: 1px solid #CACFD2  ;
     color: #5F6A6A ;
@@ -98,6 +126,9 @@ div.sidemenu-light ul li.active a{
 
 div.sidemenu-light-dark{
     background-color: #34495E ;
+}
+div.sidemenu-light-dark ul li:hover > ul{
+    background-color: #34495E !important;
 }
 div.sidemenu-light-dark ul li:hover a{
  color: #fff;
@@ -142,14 +173,62 @@ div.sidemenu-light-dark ul li.active{
         z-index: 100;
         box-shadow: 0px -2px 5px #999 !important;
     }
+    /** Nested Menu **/
+    div.sidemenu ul li:hover > ul{
+     display: block !important;
+     position: fixed;
+     bottom: 57px !important;
+
+     left: auto !important;
+     margin-left: 180px !important;
+     margin-right: 50px !important;
+     width: 200px;
+    }
+    div.sidemenu ul li > ul li{
+        margin: 0 !important;
+    }
+    div.sidemenu ul li > ul li a{
+        margin: 0 !important;
+        width: 100% !important;
+        display: block;
+        font-size: 13px !important;
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width:537px)
+{
+    div.sidemenu ul li:hover ul{
+        bottom: 70px !important;
+        left: 0px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
 }
 
 @media screen and (max-width:400px)
 {
    
-    div.sidemenu ul{
+    div.sidemenu > ul{
         min-width: 400px !important;
         overflow-x: scroll !important;
+        
+    }
+
+    div.sidemenu ul li > ul{
+        left: 0px !important;
+    }
+    div.sidemenu ul li > ul li{
+        margin: 0 !important;
+        font-size: 10px !important;
+    }
+    div.sidemenu ul li:hover > ul{
+        bottom: 85px !important;
+        width: 100% !important;
+    }
+
+    div.sidemenu ul li > ul li a{
+        text-align: center;
     }
     
 }
