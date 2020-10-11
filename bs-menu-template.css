@@ -174,7 +174,7 @@ div.sidemenu-light-dark ul li.active{
         box-shadow: 0px -2px 5px #999 !important;
     }
     /** Nested Menu **/
-    div.sidemenu ul li:hover > ul{
+    div.sidemenu.flex-tablet-bottom ul li:hover > ul{
      display: block !important;
      position: fixed;
      bottom: 57px !important;
@@ -183,6 +183,17 @@ div.sidemenu-light-dark ul li.active{
      margin-left: 165px !important;
      margin-right: 50px !important;
      width: 200px;
+    }
+
+    div.sidemenu.flex-tablet-top ul li:hover > ul{
+        display: block !important;
+        position: fixed;
+        top: 57px !important;
+   
+        left: auto !important;
+        margin-left: 165px !important;
+        margin-right: 50px !important;
+        width: 200px;
     }
     div.sidemenu ul li > ul li{
         margin: 0 !important;
@@ -198,8 +209,15 @@ div.sidemenu-light-dark ul li.active{
 
 @media screen and (max-width:537px)
 {
-    div.sidemenu ul li:hover ul{
+    div.sidemenu.flex-tablet-bottom ul li:hover ul{
         bottom: 70px !important;
+        left: 0px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    div.sidemenu.flex-tablet-top ul li:hover ul{
+        top: 70px !important;
         left: 0px !important;
         width: 100% !important;
         margin: 0 !important;
@@ -222,7 +240,7 @@ div.sidemenu-light-dark ul li.active{
         margin: 0 !important;
         font-size: 10px !important;
     }
-    div.sidemenu ul li:hover > ul{
+    div.sidemenu.flex-tablet-bottom ul li:hover > ul{
         bottom: 85px !important;
         width: 100% !important;
     }
